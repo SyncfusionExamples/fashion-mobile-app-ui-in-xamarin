@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FashionMobileApp.Views.MainPage">
+    <ContentPage.Content>
+        <!-- Main layout-->
+        <Grid RowDefinitions="*,*" >
+            <!-- Main picture-->
+            <Image Grid.Row="0" VerticalOptions="Start" Source="Model01"/>
+            <!-- Picture information-->
+            <Frame Grid.Row="1" Background="White" Margin="0,-30,0,0" HasShadow="False" CornerRadius="50" VerticalOptions="FillAndExpand">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,Auto" Padding="20">
+                   <!-- Title-->
+                   <Label Grid.Row="0" Grid.Column="0" Text="Professional Black &#10;Blazzer" FontAttributes="Bold" FontSize="23"/>
+                   <!-- Price-->
+                   <Label Grid.Row="0" Grid.Column="1" Text="$210" FontAttributes="Bold" FontSize="23" TextColor="#fb9c2c"/>
+                   <!-- Description-->
+                   <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" LineHeight="1.5" TextColor="Silver" Margin="0,15" Text="Lorem ipsum dolor sit amet, consecteur&#10;adpiscing elit. Tempor ut pharetra ultrices&#10;pulvinar nec nnisi, gravida sed matts. Portitor sit."/>
+                   <!-- Size Title-->
+                   <Label Grid.Row="2" Grid.Column="0" Text="Size" FontAttributes="Bold" FontSize="18"/>
+
+                    <!-- Size options-->
+                     <CollectionView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10,0,20" HorizontalScrollBarVisibility="Never"
+                        ItemsSource="{Binding sizes}" 
+                        ItemsLayout="HorizontalList"
+                        HeightRequest="60">
+                        <CollectionView.ItemTemplate> 
+                            <DataTemplate>
+                                <StackLayout Padding="0,0,20,0">
+                                    <buttons:SfButton Text="{Binding SizeDescripcion}" WidthRequest="40" HeightRequest='40' HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" BorderColor="#898989" TextColor="#898989" CornerRadius="10" BorderWidth="1"/>
+                                </StackLayout>
+                             </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                   <!-- Move to cart button-->
+                   <buttons:SfButton Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#fb9c2c" TextColor="White" FontAttributes="Bold" CornerRadius="20" HeightRequest="60" FontSize="17" Text="Move to cart" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
