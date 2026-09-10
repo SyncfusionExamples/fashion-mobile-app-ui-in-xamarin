@@ -1,4 +1,4 @@
-# fashion-mobile-app-ui-in-xamarin
+# Fashion mobile UI in Xamarin
 
 This Xamarin.Forms sample demonstrates how to create a modern shopping cart interface for a fashion mobile application using Syncfusion controls. The sample focuses on building an attractive and user-friendly e-commerce experience where customers can review products in their cart, modify quantities, view item details, and proceed to checkout. The layout combines native Xamarin.Forms controls with Syncfusion components to deliver a clean and interactive user interface suitable for retail and shopping applications.
 
